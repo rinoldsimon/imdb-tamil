@@ -1,6 +1,5 @@
-
-<div class="fixed">
-<nav class="top-bar" data-topbar >
+<div class="contain-to-grid fixed">
+<nav class="top-bar" data-topbar data-options="is_hover: false" >
   <ul class="title-area">
     <li class="name">
       <h1><a href="/">IMDB</a></h1>
@@ -16,22 +15,14 @@
     <ul class="right">
     <li class="active"><a href="#">News</a></li>
     <li class= "divider">
-      <li class="has-dropdown">
-        <a href="#">Login</a>
-        <ul class="dropdown">
-        <li class="divider"></li>
-          <li><a href="#">Register</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Login</a></li>
-        </ul>
-      </li>
+      <%= render 'layouts/login_links' %>
       
     </ul>
 
     <!-- Left Nav Section -->
     <ul class="left">
       <li class="has-dropdown">
-        <a href="#">Movies & Showtimes</a>
+        <a>Movies & Showtimes</a>
         <ul class="dropdown">
         <li class="divider"></li>
           <li><a href="#">Movies</a></li>
@@ -42,7 +33,7 @@
     <li class="divider"></li>
 
       <li class="has-dropdown">
-        <a href="#">Events & Photos</a>
+        <a>Events & Photos</a>
         <ul class="dropdown">
         <li class="divider"></li>
           <li><a href="#">Events</a></li>
