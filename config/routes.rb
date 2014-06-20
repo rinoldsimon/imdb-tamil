@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'news/news'
+
+  get 'movies/film'
+
   devise_for :users
   get 'home/index'
   root to: 'home#index'

@@ -1,8 +1,8 @@
-<div class="contain-to-grid fixed">
-<nav class="top-bar" data-topbar data-options="is_hover: false" >
+<div class="fixed">
+<nav class="top-bar" data-topbar  >
   <ul class="title-area">
     <li class="name">
-      <h1><a href="/">IMDB</a></h1>
+      <h1><a href="/" > <img width=100 height=100  title = "Home" src ="/images/5.jpg"> </a></h1>
     </li>
     
     
@@ -13,9 +13,9 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-    <li class="active"><a href="#">News</a></li>
+    <li class="active"><a href="/news/news">News</a></li>
     <li class= "divider">
-      <%= render 'layouts/login_links' %>
+      <%= render '/layouts/login_links' %>
       
     </ul>
 
@@ -25,7 +25,7 @@
         <a>Movies & Showtimes</a>
         <ul class="dropdown">
         <li class="divider"></li>
-          <li><a href="#">Movies</a></li>
+          <li><a href="/movies/film">Movies</a></li>
           <li class="divider"></li>
           <li><a href="#">Showtimes & Tickets</a></li>
         </ul>
@@ -38,15 +38,15 @@
         <li class="divider"></li>
           <li><a href="#">Events</a></li>
           <li class="divider"></li>
+          <li class="has-dropdown"><a>Gallery</a>
+          <ul class="dropdown">
           <li><a href="#">Photos</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Videos</a></li>
+          </li>
         </ul>
       </li>
-    <li class="divider"></li>
     </ul>
-
-
-
-  </section>
+</section>
 </nav>
 </div>
-

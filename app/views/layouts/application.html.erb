@@ -4,19 +4,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Imdb-Tamil" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "IMDb-Tamil" %></title>
+    <link rel="icon" href="/images/5.jpg" type="image/x-icon">
 
-    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag    "application", media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
+
+
   </head>
 
   <body>
-   <%= render 'layouts/topbar' %>
-   <%= render 'layouts/messages' %>
-       
+  <header>
+   <%= render '/layouts/topbar' %>
+   </header>
+   
+   <main role="main">
+   <%= render '/layouts/messages' %>
+   </main>
+
 
     <%= yield %>
-    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "application", media: 'all' , 'data-turbolinks-track' => true  %>
+
+
   </body>
 </html>
+
