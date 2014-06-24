@@ -1,0 +1,43 @@
+<div class= "row">
+<br>
+<section class="small-10 small-centered columns">
+<div class= "panel">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @movie.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @movie.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong><br>
+  <%= image_tag(@movie.picture_url, :width => 600) if @movie.picture.present? %>
+</p>
+
+<p>
+  <strong>Video:</strong><br>
+
+  <% if @movie.video_url.present? %>
+  <div class="flex-video">
+  <video width="380" height="220" controls="controls" preload="preload">
+    <source src="<%= @movie.video.url %>" type="video/mp4; codecs="avc1.42E01E, mp4a.40.2"">
+  </video>
+  </div>
+<% else %>
+  <p>Please be patient while we process this video</p>
+<% end %>
+
+  <!--  <%= video_tag(@movie.video_url, :width => 600) if @movie.video.present? %> -->
+</p>
+<div class="button">
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Back', movies_path %>
+</div>
+</div>
+</section>
+</div>
