@@ -48,5 +48,6 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 gem 'foundation-rails'
 gem 'devise'
-
 gem 'carrierwave'
+gem 'omniauth'
+gem 'omniauth-facebook'
