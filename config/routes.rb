@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
   get 'news/news'
 
-  get 'movies/film'
+  get 'imdbmovies/top250'
+  get 'imdbmovies/comingsoon'
+  get 'imdbmovies/openingthisweek'
+  get 'imdbmovies/boxofficetop10'
 
   #devise_for :users
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }

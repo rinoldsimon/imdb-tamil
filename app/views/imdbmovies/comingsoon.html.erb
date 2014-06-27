@@ -1,0 +1,28 @@
+
+<div class= "row">
+<br>
+  <center><h1> Movies that are Coming Soon </h1></center>
+  <section class="small-6 small-centered columns">
+      <table>
+      <thead>
+          <tr>
+            <th>Movie-Id </th>  
+            <th>Movie</th>
+            <th>Year</th>
+          </tr>
+      </thead>
+        <tbody>
+  
+        <% @list4.each do | movie | %>
+          <tr>          
+             <td><%= movie.imdb_id %></td>
+             <td><a href="http://www.imdb.com/title/tt<%= movie.imdb_id %>/?ref_=cs_ov_tt"><%= movie.title %></a></td>
+             <td><%= movie.year %> </td>
+          </tr>
+         <% end %>
+  
+  
+        </tbody>
+      </table>
+  </section>
+</div>
