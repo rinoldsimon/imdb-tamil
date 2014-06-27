@@ -6,5 +6,11 @@ class Movie < ActiveRecord::Base
   validates_presence_of :video
   
   mount_uploader :video, VideoUploader
+  
+
+  def self.search(query)
+  where("name like ?", "%#{query}%") 
+  end
+
 end
 
