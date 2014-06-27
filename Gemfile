@@ -49,6 +49,7 @@ gem 'spring',        group: :development
 gem 'foundation-rails'
 gem 'devise'
 gem 'carrierwave'
+#gem "fog"
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
