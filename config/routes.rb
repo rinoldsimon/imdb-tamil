@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'showtime/showtime'
+
+  get 'showtime/tickets'
+
   resources :movies
 
   get 'news/news'
