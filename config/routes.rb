@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'gallery/photos'
+
+  get 'gallery/videos'
+
   get 'showtime/showtime'
 
   get 'showtime/tickets'
