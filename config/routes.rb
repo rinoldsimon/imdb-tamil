@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'events/event'
+
   get 'gallery/photos'
 
   get 'gallery/videos'
