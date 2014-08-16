@@ -4,20 +4,20 @@
 <div class= "panel">
 <span class="label"><h1>Movies List</h1></span>
 
-<section class="small-8">
 <%= form_tag(movies_path, :method => "get", id: "search-form") do %>
-<table>
- <tr>
- <td>
-   <%= text_field_tag :search, params[:search], placeholder: "Type Movie name" %>
- </td>
- <td>
-  <div class ="button"><%= submit_tag "Search", :name => nil %></div>
- </td>
- </tr>
- </table>
+
+ <div class="large-7 columns">
+ <div class="row collapse">          
+   <div class="small-9 columns">
+   <div id="right-label"><%= text_field_tag :search, params[:search], placeholder: "Type Movie name" %></div>
+   </div>
+ 
+ <div class="small-3 columns">
+  <input class="button postfix" type="submit" value="Search"></div>
+ </div>
+ </div>
+
 <% end %>
-</section>
 
 <table>
   <thead>
