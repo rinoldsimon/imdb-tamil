@@ -2,7 +2,7 @@
 <br>
 <section class="small-8 small-centered columns">
 <div class= "panel">
-<span class="label"><h1>Movies List</h1></span>
+<h1>Movies List</h1>
 
 <%= form_tag(movies_path, :method => "get", id: "search-form") do %>
 
@@ -41,9 +41,9 @@
         <!-- <td><%= movie.picture %></td>
         <td><%= movie.video %></td> -->
         
-        <td><div class="[tiny small large] button [alert success secondary]" ><%= link_to 'Show', movie %></div></td>
-        <td><div class="[tiny small large] button [alert success secondary]" ><%= link_to 'Edit', edit_movie_path(movie) %></div></td>
-        <td><div class="[tiny small large] button [alert success secondary]" ><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></div></td>
+        <td><%= link_to 'Show', movie %></td>
+ <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
        
       </tr>
     <% end %>
@@ -52,7 +52,7 @@
 
 <br>
 <div class="button">
-<%= link_to 'New Movie', new_movie_path %>
+<%= link_to '<font color = "white" >New Movie</font>'.html_safe, new_movie_path %>
 </div>
 </div>
 </section>
