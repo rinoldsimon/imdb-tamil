@@ -32,9 +32,11 @@
     <%= f.label :video %><br>
     <%= f.file_field :video %>
   </div>
-  <div class="actions" class="button">
-    <%= f.submit %>
-  </div>
+  <% if @movie.persisted? %>
+      <input class="button" type="submit" value="Update Device">
+    <% else %>
+      <input class="button" type="submit" value="Create Device"> 
+  <% end %>
 <% end %>
 </div>
 </section>
